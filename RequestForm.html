@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order</title>
+    <title>Request</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
@@ -74,6 +74,8 @@
             });
         }
     </script>
+
+    <script src="js/RequestFormData.js"></script>
 
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
 
@@ -322,7 +324,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <select name="" class="form-select block w-full focus:bg-white" id="org-type">
+                            <select name="" class="form-select block w-full focus:bg-white" id="orgselect">
                                 <option value="Select">Select</option>
                                 <option value="School">School</option>
                                 <option value="NGO">NGO</option>
@@ -431,7 +433,7 @@
                     </div> -->
                     <div class="md:flex mb-6">
                         <div class="md:w-1/3">
-                            <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-name">
+                            <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="date-time">
                                 Date and Time
                             </label>
                         </div>
@@ -484,14 +486,14 @@
                     <div class="md:flex mb-6">
                         <div class="md:w-1/3">
                             <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4"
-                                for="my-checkbox">
+                                for="org-terms">
                                 Our terms and conditions
                             </label>
                         </div>
                         <div class="md:w-2/3">
                             <div>
                                 <label class="inline-flex items-center">
-                                    <input type="checkbox" class="form-checkbox text-indigo-600" checked>
+                                    <input type="checkbox" class="form-checkbox text-indigo-600" id="org-terms" checked>
                                     <span class="ml-2">I accept the terms and conditions</span>
                                 </label>
                             </div>
@@ -542,7 +544,7 @@
 
                     <button
                         class="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mr-4"
-                        type="button" onclick="writeData()">
+                        type="button" onclick="submitForm()">
                         Confirm
                     </button>
 
