@@ -1,8 +1,20 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyCe420SVK7KcwvmpPSuI9bCd3Ay03DamgI",
+    authDomain: "foodorg-5c290.firebaseapp.com",
+    projectId: "foodorg-5c290",
+    storageBucket: "foodorg-5c290.appspot.com",
+    messagingSenderId: "934628512365",
+    appId: "1:934628512365:web:369485f864f14386fe2564"
+};
+
+firebase.initializeApp(firebaseConfig);
 //Listen for a submit
 // document.querySelector(".donationForm").addEventListener("submit",submitForm);
 
-//For extracting RequestForm data and updating in firestore
+//Referrence form info
+let RequestFormInfo = firebase.database().ref("RequestFormUsers");
 
+//For extracting RequestForm data and updating in firestore
 function submitForm() {
     // e.preventDefault();
     // Get input Values
@@ -18,5 +30,14 @@ function submitForm() {
     let OrgDateAndTime = document.querySelector("#date-time").value;
     let terms = document.querySelector("#org-terms").value;
     console.log(MyName, MyNumber, MyEmail, MyAddress, OrgName, OrgType, ContactNumber, OrgEmail, OrgAddress, OrgDateAndTime, terms);
-    
+
+    saveRequestForm(MyName, MyNumber, MyEmail, MyAddress, OrgName, OrgType, ContactNumber, OrgEmail, OrgAddress, OrgDateAndTime, terms);
+}
+function saveRequestForm(MyName, MyNumber, MyEmail, MyAddress, OrgName, OrgType, ContactNumber, OrgEmail, OrgAddress, OrgDateAndTime, terms) {
+
+    let newRequestInfo = RequestFormInfo.push();
+
+    newRequestInfo.set({
+        MyName, MyNumber, MyEmail, MyAddress, OrgName, OrgType, ContactNumber, OrgEmail, OrgAddress, OrgDateAndTime, terms
+    });
 }
