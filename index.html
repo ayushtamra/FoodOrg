@@ -24,6 +24,18 @@
 </head>
 
 <body>
+	<!-- Including the js -->
+	
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
 	<!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -73,8 +85,8 @@
 							<h1 class="m-b-20"><strong>Welcome To <br> FoodOrg</strong></h1>
 							<p class="m-b-40">A platform through which you can get leftout processed food<br> 
 							through different restaurants across the country</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="RequestForm.html">Request food</a></p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="donateform.html">Donate food</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" onclick="openRequest()">Request food</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" onclick="openDonate()">Donate food</a></p>
 						</div>
 					</div>
 				</div>
@@ -87,8 +99,8 @@
 							<h1 class="m-b-20"><strong>Welcome To <br> FoodOrg</strong></h1>
 							<p class="m-b-40">A platform through which you can get leftout processed food<br> 
 							through different restaurants, wedding functions, across the country</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="RequestForm.html">Request food</a></p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="donateform.html">Donate food</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" onclick="openRequest()">Request food</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" onclick="openDonate()">Donate food</a></p>
 						</div>
 					</div>
 				</div>
@@ -100,8 +112,8 @@
 						<div class="col-md-12">
 							<h1 class="m-b-20"><strong>Welcome To <br> FoodOrg</strong></h1>
 							<p class="m-b-40">We have taken oath for 24/7 service so that no one sleeps empty stomach</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="RequestForm.html">Request food</a></p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="donateform.html">Donate food</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" onclick="openRequest()">Request food</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" onclick="openDonate()">Donate food</a></p>
 						</div>
 					</div>
 				</div>
@@ -469,6 +481,7 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/signin.js"></script>
     <!-- ALL PLUGINS -->
 	<script src="js/jquery.superslides.min.js"></script>
 	<script src="js/images-loded.min.js"></script>
