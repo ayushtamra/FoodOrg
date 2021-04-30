@@ -62,9 +62,9 @@ function openRequest() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       console.log(user.email);
-      window.location = "RequestForm.html";
+      window.location = "request-form.html";
     } else {
-      url = "RequestForm.html";
+      url = "request-form.html";
       window.location = "signin.html";
     }
   });
@@ -74,9 +74,9 @@ function openDonate() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       console.log(user.email);
-      window.location = "DonateForm.html";
+      window.location = "donate-form.html";
     } else {
-      url = "DonateForm.html";
+      url = "donate-form.html";
       window.location = "signin.html";
     }
   });

@@ -1,12 +1,12 @@
 var firebaseConfig = {
     apiKey: "AIzaSyCe420SVK7KcwvmpPSuI9bCd3Ay03DamgI",
     authDomain: "foodorg-5c290.firebaseapp.com",
+    databaseURL: "https://foodorg-5c290-default-rtdb.firebaseio.com",
     projectId: "foodorg-5c290",
     storageBucket: "foodorg-5c290.appspot.com",
     messagingSenderId: "934628512365",
     appId: "1:934628512365:web:369485f864f14386fe2564"
-};
-
+  };
 firebase.initializeApp(firebaseConfig);
 //Listen for a submit
 // document.querySelector(".donationForm").addEventListener("submit",submitForm);
